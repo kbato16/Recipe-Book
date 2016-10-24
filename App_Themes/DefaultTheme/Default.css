@@ -13,6 +13,7 @@ h1 {
     font-variant-caps:small-caps;   
 }
 
+/*#region name Transparent Gradient Overlay*/
 #content{
     background: -webkit-linear-gradient(black,darkslategray); 
     background: -o-linear-gradient(black,darkslategray); 
@@ -26,3 +27,23 @@ h1 {
     right:0px;
     left:0px;
 }
+/*#endregion */
+
+/*#region Bootstrap Overrides */
+
+.control-label{
+    font-size: 16px;
+}
+.form-control{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.panel-heading{
+    font-size:18px;
+}
+
+.container form-group{
+    padding-top: 20px;
+}
+
+/*#endregion */
