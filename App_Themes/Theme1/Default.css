@@ -1,0 +1,28 @@
+﻿body {
+    font-family:"Century Gothic";
+    background: url(../../Assets/BG.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:azure;
+}
+
+h1 {
+    font-weight:900;
+    font-variant-caps:small-caps;   
+}
+
+#content{
+    background: -webkit-linear-gradient(black,darkslategray); 
+    background: -o-linear-gradient(black,darkslategray); 
+    background: -moz-linear-gradient(black,darkslategray);
+    background: linear-gradient(black,darkslategray);
+    z-index:-1;
+    opacity:0.7;
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    left:0px;
+}
