@@ -12,6 +12,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
        
     }
+    
+
     public string ActivePage()
     {
         
@@ -19,22 +21,22 @@ public partial class MasterPage : System.Web.UI.MasterPage
         
         "<li class=\"active\"><a href = \"Home.aspx\" > Home </a></li>" +
         "<li><a href = \"Recipes.aspx\" > Recipes </a></li>"+
-        "<li><a href = \"Add.aspx\" > Add </a></li>"+
+        "<li><a href = \"Add.aspx\" > Add Recipe </a></li>"+
         "<li><a href = \"Search.aspx\" > Search </a></li>",
         
         "<li><a href = \"Home.aspx\" > Home </a></li>" +
         "<li class=\"active\"><a href = \"Recipes.aspx\" > Recipes </a></li>"+
-        "<li><a href = \"Add.aspx\" > Add </a></li>"+
+        "<li><a href = \"Add.aspx\" > Add Recipe </a></li>"+
         "<li><a href = \"Search.aspx\" > Search </a></li>",
         
         "<li><a href = \"Home.aspx\" > Home </a></li>" +
         "<li><a href = \"Recipes.aspx\" > Recipes </a></li>"+
-        "<li class=\"active\"><a href = \"Add.aspx\" > Add </a></li>"+
+        "<li class=\"active\"><a href = \"Add.aspx\" > Add Recipe </a></li>"+
         "<li><a href = \"Search.aspx\" > Search </a></li>",
         
         "<li><a href = \"Home.aspx\" > Home </a></li>" +
         "<li><a href = \"Recipes.aspx\" > Recipes </a></li>"+
-        "<li><a href = \"Add.aspx\" > Add </a></li>"+
+        "<li><a href = \"Add.aspx\" > Add Recipe </a></li>"+
         "<li class=\"active\"><a href = \"Search.aspx\" > Search </a></li>"};
 
         string active = navPages[0];
@@ -47,7 +49,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
             case "Recipes":
                 active = navPages[1];
                 break;
-            case "Add":
+            case "Add Recipe":
                 active = navPages[2];
                 break;
             case "Search":

@@ -9,9 +9,16 @@
 }
 
 h1 {
+    font-family:"Century Gothic";
     font-weight:900;
-    font-variant-caps:small-caps;   
+    font-variant-caps:small-caps;
 }
+
+.CategoryList input{
+    margin-left:10px;
+    margin-top:5px;
+}
+
 
 /*#region name Transparent Gradient Overlay*/
 #content{
@@ -40,6 +47,7 @@ h1 {
 }
 .panel-heading{
     font-size:18px;
+    margin-bottom:10px;
 }
 
 .container form-group{
