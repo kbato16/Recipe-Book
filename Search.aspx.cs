@@ -20,8 +20,6 @@ public partial class Search : System.Web.UI.Page
             SearchForm.Visible = true;
             SearchResults.Visible = false;
         }
-        
-
     }
     private void BindDataList(string query)
     {
@@ -181,44 +179,50 @@ public partial class Search : System.Web.UI.Page
         {
             return null;
         }
-        
     }
 
     protected void SearchBtn_Click(object sender, EventArgs e)
     {
-        string queryString = "Select * from Recipes ";
+        string queryString = "Select * from Recipes where Isprivate = 0 ";
+        if (Session["Username"] != null)
+        {
+            queryString += "or SubmittedBy = " + "'" + Session["Username"] + "' ";
+        }
+
         if (getTextBox() == null && getCategories() == null && getCuisineList() == null)
         {
             queryString += "";
         }
         else if (getTextBox() != null && getCategories() == null && getCuisineList() == null)
         {
-            queryString += " where " + getTextBox();
+            queryString += " and " + getTextBox();
         }
         else if (getTextBox() == null && getCategories() != null && getCuisineList() == null)
         {
-            queryString += "where " + getCategories();
+            queryString += "and " + getCategories();
         }
         else if (getTextBox() == null && getCategories() == null && getCuisineList() != null)
         {
-            queryString += "where " + getCuisineList();
+            queryString += "and " + getCuisineList();
         }
         else if (getTextBox() == null && getCategories() != null && getCuisineList() != null)
         {
-            queryString += "where " + getCategories() + " and " + getCuisineList();
+            queryString += "and " + getCategories() + " or " + getCuisineList();
         }
         else if (getTextBox() != null && getCategories() != null && getCuisineList() == null)
         {
-            queryString += "where " + getTextBox() + " and " + getCategories();
+            queryString += "and " + getTextBox() + " and " + getCategories();
         }
         else if (getTextBox() != null && getCategories() == null && getCuisineList() != null)
         {
-            queryString += "where " + getTextBox() + " and " + getCuisineList();
+            queryString += "and " + getTextBox() + " and " + getCuisineList();
         }
         else if (getTextBox() != null && getCategories() != null && getCuisineList() != null)
         {
-            queryString += "where " + getTextBox() + " and " + getCategories() + " and " + getCuisineList();
+            queryString += "and " + getTextBox() + " and " + getCategories() + " or " + getCuisineList();
         }
+
+    
         BindDataList(queryString); 
         SearchResults.Visible = true;
         SearchForm.Visible = false;

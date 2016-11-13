@@ -41,6 +41,8 @@
             </asp:DropDownList>
 
             <asp:Label class="control-label" ID="CookingTimeLabel" runat="server" Text="Cooking Time *"></asp:Label>
+            <asp:RangeValidator Type="Integer" runat="server" ControlToValidate="CookingTime" Display="Dynamic" ErrorMessage="Enter a numeric value (in minutes)" ValidationGroup="AddForm" MinimumValue="0" MaximumValue="600" ForeColor="Red" />
+            <asp:RequiredFieldValidator ControlToValidate="CookingTime" runat="server" ValidationGroup="AddForm" ErrorMessage="Cooking time Required" Display="Dynamic" ForeColor="Red"/>
             <asp:TextBox class="form-control" ID="CookingTime" runat="server"></asp:TextBox>
 
             <asp:Label class="control-label" ID="PortionsLabel" runat="server" Text="Portions"></asp:Label>
