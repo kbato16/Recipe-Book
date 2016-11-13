@@ -16,13 +16,13 @@ public partial class Add : System.Web.UI.Page
         if (Session["Username"] != null)
         {
             SubmittedBy.Text = Session["Username"].ToString();
+            SubmittedBy.ReadOnly = true;
         }
 
     }
 
     protected void AddRecipesBtn_Click(object sender, EventArgs e)
     {
-
         connect.Open();
         SqlCommand addRecipe = new SqlCommand("insert into Recipes values(Next Value for Recipe_ID_SQ, @rName, @submittedBy, @rCategory, @rPrepTime, @rPortions, @rCuisine, @isPrivate, @rDescription, @bookId);", connect);
         addRecipe.Parameters.AddWithValue("@rName", RecipeNameText.Text);
@@ -71,6 +71,7 @@ public partial class Add : System.Web.UI.Page
         {
             RecipeNameText.CssClass = "form-group has-error";
         }
+        
     }
 
 }
