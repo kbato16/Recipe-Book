@@ -33,7 +33,7 @@
     </div>
     <footer class="well well-sm">
         Page Counter: <asp:Label ID="PageCount" runat="server"></asp:Label><br />
-        Session Counter: <asp:Label ID="SessionCount" runat="server"></asp:Label>
+        Counter: <asp:Label ID="SessionCount" runat="server"></asp:Label>
     </footer>
 
 </asp:Content>
