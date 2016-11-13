@@ -66,12 +66,25 @@ public partial class Add : System.Web.UI.Page
         addRecipe.Parameters.AddWithValue("@bookId", DBNull.Value);
         addRecipe.ExecuteNonQuery();
         connect.Close();
-        SuccessDialog.Visible = true;
+        
         if (RecipeNameText.CausesValidation)
         {
             RecipeNameText.CssClass = "form-group has-error";
         }
-        
+
+        SuccessDialog.Visible = true;
+        RecipeNameText.Text = null;
+        CategoryList.SelectedValue="0";
+        CuisineList.SelectedValue = "0";
+        CookingTime.Text = null;
+        Portions.Text = null;
+        RecipeDescription.Text = null;
+        SetAsPrivate.Checked = false;
+        if (Session["Username"] == null)
+        {
+            SubmittedBy.Text = null;
+        }
+
     }
 
 }
