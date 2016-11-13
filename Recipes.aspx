@@ -13,15 +13,16 @@
      <div id="RecipesList" visible="false" class="panel panel-info" runat="server">
         <div class="panel-heading">List of Recipes:</div>
         <div class="panel-body">
-            <asp:GridView ID="DataResult" runat="server" AutoGenerateColumns="False" AllowSorting="True" CellPadding="4" CssClass="table table-hover table-striped" GridLines="Horizontal" BorderColor="Black">
+            <asp:GridView ID="DataResult" runat="server" AutoGenerateColumns="False" CellPadding="4" CssClass="table table-hover table-striped" GridLines="Horizontal" BorderColor="Black" >
                 <AlternatingRowStyle CssClass="active"/>
                 <Columns>
-                    <asp:BoundField DataField="RecipeName" HeaderText="Recipe Name" SortExpression="SortByRecipeName" HeaderStyle-CssClass="info"/>
-                    <asp:BoundField DataField="CuisineList" HeaderText="Cuisine" SortExpression="SortByCuisine" HeaderStyle-CssClass="info"/>
-                    <asp:BoundField DataField="CategoryList" HeaderText="Category" SortExpression="SortByRecipeName" HeaderStyle-CssClass="info"/>
-                    <asp:BoundField DataField="SubmittedBy" HeaderText="Submitted By" SortExpression="SortByRecipeName" HeaderStyle-CssClass="info"/>
+                    <asp:BoundField DataField="RecipeName" HeaderText="Recipe Name"  HeaderStyle-CssClass="info"/>
+                    <asp:BoundField DataField="CuisineList" HeaderText="Cuisine"  HeaderStyle-CssClass="info"/>
+                    <asp:BoundField DataField="CategoryList" HeaderText="Category" HeaderStyle-CssClass="info"/>
+                    <asp:BoundField DataField="SubmittedBy" HeaderText="Submitted By" HeaderStyle-CssClass="info"/>
                 </Columns>
             </asp:GridView>
+         
         </div>
     </div>
 </asp:Content>

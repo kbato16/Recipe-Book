@@ -23,6 +23,7 @@ public partial class Recipes : System.Web.UI.Page
             SqlCommand cmd = new SqlCommand(queryString, connect);
             connect.Open();
             SqlDataReader reader = cmd.ExecuteReader();
+            
             if (reader.HasRows)
             {
                 RecipesList.Visible = true;
@@ -38,6 +39,7 @@ public partial class Recipes : System.Web.UI.Page
                 reader.Close();
                 connect.Close();
             }
+           
         }
     }
 }
