@@ -65,7 +65,7 @@
     <div runat="server" id="SearchResults" visible="false" class="panel panel-info">
         <div class="panel-heading">List of Recipes:</div>
         <div class="panel-body">
-            <asp:GridView ID="DataSearchResult" runat="server" AutoGenerateColumns="False"CellPadding="4" CssClass="table table-hover table-striped" GridLines="Horizontal" BorderColor="Black">
+            <asp:GridView ID="DataSearchResult" runat="server" AutoGenerateColumns="False" CellPadding="4" CssClass="table table-hover table-striped" GridLines="Horizontal" BorderColor="Black">
                 <AlternatingRowStyle CssClass="active"/>
                 <Columns>
                     <asp:BoundField DataField="RecipeName" HeaderText="Recipe Name" HeaderStyle-CssClass="info"/>
