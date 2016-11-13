@@ -13,7 +13,7 @@ public partial class Login : System.Web.UI.Page
     SqlConnection con = new SqlConnection(WebConfigurationManager.ConnectionStrings["AzureRecipeBookDB"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        
     }
 
     private bool checkUser()
