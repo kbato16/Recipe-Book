@@ -27,6 +27,13 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a href="Home.aspx"><img src="Assets/logo.png" width="50px"/></a>
+                    <span>
+                    <asp:HyperLink ID="LoginLink" Visible="true" NavigateUrl="Login.Aspx" Text="Login" runat="server"/>
+                    <asp:Label ID="SessionLabel" runat="server" Visible="false">Welcome <%Response.Write(Session["Username"]);%></asp:Label>
+                     <asp:Button ID="Logout" Visible="true" Text="Logout" runat="server" ValidationGroup="Login1" OnClick="Logout_Click"/>
+                        </span>
+
+
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
