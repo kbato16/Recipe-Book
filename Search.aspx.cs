@@ -74,6 +74,8 @@ public partial class Search : System.Web.UI.Page
         }
         catch (ArgumentNullException)
         {
+            DataSearchResult.DataSource = null;
+            DataSearchResult.DataBind();
             connect.Close();
             SearchError.Visible = true;
             throw;
